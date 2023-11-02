@@ -1,4 +1,5 @@
 <?global $arTheme;?>
+    element_1.php
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
 	"news",

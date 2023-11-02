@@ -5,7 +5,7 @@
       <webServer id="cc0495fd-b49c-4f6d-a996-17e08c3ddb15" name="Vrutskii-TEST" url="http://h37.netangels.ru">
         <fileTransfer rootFolder="/www" host="h37.netangels.ru" port="21">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions controlEncoding="utf-8" dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>

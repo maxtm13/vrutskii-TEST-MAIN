@@ -743,7 +743,6 @@ $bDiscountCounter = ($arResult['ACTIVE_TO'] && in_array('ACTIVE_TO', $arParams['
         <!--    </pre>-->
 
         <div id="CHARACTERISTICS" class="props_block props_block--table props_block--nbg bordered rounded-4">
-            <!--					<table class="props_block__wrapper my_char">-->
 
             <h3 class="service_h">
                 <?= $arResult["CHARACTERISTICS"]["TITLE_PROC"]["VALUE"] ?>
@@ -752,7 +751,7 @@ $bDiscountCounter = ($arResult['ACTIVE_TO'] && in_array('ACTIVE_TO', $arParams['
                 <?= $arResult["CHARACTERISTICS"]["TEXT_PROC"]["VALUE"] ?>
             </p>
             <? $arPropValue = $arResult["CHARACTERISTICS"]["_OUR_PROC"]["VALUE"]; ?>
-            <div class="grid_items">
+            <div class="grid_items  grid_items-desktop">
 
                 <div class="left_content">
                     <? for ($i = 0; $i < count($arPropValue); $i += 2) {
@@ -777,30 +776,17 @@ $bDiscountCounter = ($arResult['ACTIVE_TO'] && in_array('ACTIVE_TO', $arParams['
                 </div>
 
             </div>
-            <? //foreach($arResult["CHARACTERISTICS"] as $arProp):?>
+            <div class="grid_items  grid_items-mobile">
+                <div class="grid_items-content">
+                <?foreach ($arPropValue as $item) {?>
+                    <div class="item">
+                        <div class="left_text"><?= $item ?></div>
 
-            <!--							<tr class="char" >-->
-            <!--								<td class="char_name font_15 color_666">-->
-            <!--									<div class="props_item -->
-            <? //if($arProp["HINT"] && $arParams["SHOW_HINTS"] == "Y"){?><!--whint--><? //}?><!--">-->
-            <!--										<span>--><? //=$arProp["NAME"]?><!--</span>-->
-            <!--										-->
-            <? //if($arProp["HINT"] && $arParams["SHOW_HINTS"]=="Y"):?><!--<div class="hint hint--down"><span class="hint__icon rounded bg-theme-hover border-theme-hover bordered"><i>?</i></span><div class="tooltip">-->
-            <? //=$arProp["HINT"]?><!--</div></div>--><? //endif;?>
-            <!--									</div>-->
-            <!--								</td>-->
-            <!--								<td class="char_value font_15 color_333">-->
-            <!--									<span>-->
-            <!--										--><? //if(count((array)$arProp["DISPLAY_VALUE"]) > 1):?>
-            <!--											--><? //=implode(', ', $arProp["DISPLAY_VALUE"]);?>
-            <!--										--><? //else:?>
-            <!--											--><? //=$arProp["DISPLAY_VALUE"];?>
-            <!--										--><? //endif;?>
-            <!--									</span>-->
-            <!--								</td>-->
-            <!--							</tr>-->
-            <!--						--><? //endforeach;?>
-            <!--					</table>-->
+                    </div>
+                <?}?>
+                </div>
+                <div class="center_line"></div>
+            </div>
         </div>
         <? /*endif;*/ ?>
     <? endif; ?>
@@ -811,13 +797,13 @@ $bDiscountCounter = ($arResult['ACTIVE_TO'] && in_array('ACTIVE_TO', $arParams['
 <? $templateData['DOCUMENTS'] = boolval($arResult['DOCUMENTS']); ?>
 <? if ($templateData['DOCUMENTS']): ?>
     <? $this->SetViewTarget('PRODUCT_FILES_INFO'); ?>
-<!--<div class="doc-list-inner__list  grid-list  grid-list--items-1 grid-list--no-gap ">-->
+    <!--<div class="doc-list-inner__list  grid-list  grid-list--items-1 grid-list--no-gap ">-->
     <div class="files__items_wrapper-grid">
         <? foreach ($arResult['DOCUMENTS'] as $arItem): ?>
             <?
-        echo '<pre>';
-        print_r($arItem);
-        echo '</pre>';
+//        echo '<pre>';
+//        print_r($arItem);
+//        echo '</pre>';
             $arDocFile = CAllcorp3::GetFileInfo($arItem);
             $docFileDescr = $arDocFile['DESCRIPTION'];
             $docFileSize = $arDocFile['FILE_SIZE_FORMAT'];
@@ -831,11 +817,9 @@ $bDiscountCounter = ($arResult['ACTIVE_TO'] && in_array('ACTIVE_TO', $arParams['
             ?>
 
             <div class="files__item_cell">
-                <pre>
-                <? print_r( $arDocFile); ?>
-            </pre>
+
                 <a href="<?= $arDocFile['SRC'] ?>" class="files__item-link" target="_blank">
-                    <div class="files__item-icon"> <?=CAllcorp3::showIconSvg('image-preview fill-theme-target', SITE_TEMPLATE_PATH.'/images/files-type-icon.svg');?></div>
+                    <div class="files__item-icon"> <?= CAllcorp3::showIconSvg('image-preview fill-theme-target', SITE_TEMPLATE_PATH . '/images/files-type-icon.svg'); ?></div>
                     <div class="files__item-name">
                         <div class="files__item-name-name"><?= $arDocFile['FILENAME'] ?></div>
                         <div class="files__item-name-title"><?= $docFileDescr ?></div>
@@ -844,56 +828,7 @@ $bDiscountCounter = ($arResult['ACTIVE_TO'] && in_array('ACTIVE_TO', $arParams['
                 </a>
             </div>
 
-<!--                    <div class="doc-list-inner__list  grid-list  grid-list--items-1 grid-list--no-gap ">-->
-<!--                                --><?//foreach($arResult['DOCUMENTS'] as $arItem):?>
-<!--                                    --><?//
-//                                    $arDocFile = CAllcorp3::GetFileInfo($arItem);
-//                                    $docFileDescr = $arDocFile['DESCRIPTION'];
-//                                    $docFileSize = $arDocFile['FILE_SIZE_FORMAT'];
-//                                    $docFileType = $arDocFile['TYPE'];
-//                                    $bDocImage = false;
-//                                    if ($docFileType == 'jpg' || $docFileType == 'jpeg' || $docFileType == 'bmp' || $docFileType == 'gif' || $docFileType == 'png') {
-//                                        $bDocImage = true;
-//                                    }
-//                                    ?>
-            <!--				<div class="doc-list-inner__wrapper grid-list__item colored_theme_hover_bg-block grid-list-border-outer fill-theme-parent-all">-->
-            <!--					<div class="doc-list-inner__item height-100 rounded-4 shadow-hovered shadow-no-border-hovered">-->
-            <!--						--><? //if($arDocFile):?>
-            <!--							<div class="doc-list-inner__icon-wrapper">-->
-            <!--								<a class="file-type doc-list-inner__icon">-->
-            <!--									<i class="file-type__icon file-type__icon----><? //=$docFileType?><!--"></i>-->
-            <!--								</a>-->
-            <!--							</div>-->
-            <!--						--><? //endif;?>
-            <!--						<div class="doc-list-inner__content-wrapper">-->
-            <!--							<div class="doc-list-inner__top">-->
-            <!--								--><? //if($arDocFile):?>
-            <!--									--><? //if($bDocImage):?>
-            <!--										<a href="--><? //=$arDocFile['SRC']?><!--" class="doc-list-inner__name fancy dark_link color-theme-target switcher-title" data-caption="--><? //=htmlspecialchars($docFileDescr)?><!--">--><? //=$docFileDescr?><!--</a>-->
-            <!--									--><? //else:?>
-            <!--										<a href="--><? //=$arDocFile['SRC']?><!--" target="_blank" class="doc-list-inner__name dark_link color-theme-target switcher-title" title="--><? //=htmlspecialchars($docFileDescr)?><!--">-->
-            <!--											--><? //=$docFileDescr?>
-            <!--										</a>-->
-            <!--									--><? //endif;?>
-            <!--									<div class="doc-list-inner__label">--><? //=$docFileSize?><!--</div>-->
-            <!--								--><? //else:?>
-            <!--									<div class="doc-list-inner__name switcher-title">--><? //=$docFileDescr?><!--</div>-->
-            <!--								--><? //endif;?>
-            <!--								--><? //if($arDocFile):?>
-            <!--									--><? //if($bDocImage):?>
-            <!--										<a class="doc-list-inner__icon-preview-image doc-list-inner__link-file fancy fill-theme-parent" data-caption="--><? //= htmlspecialchars($docFileDescr)?><!--" href="--><? //=$arDocFile['SRC']?><!--">-->
-            <!--											--><? //=CAllcorp3::showIconSvg('image-preview fill-theme-target', SITE_TEMPLATE_PATH.'/images/svg/preview_image.svg');?>
-            <!--										</a>-->
-            <!--									--><? //else:?>
-            <!--										<a class="doc-list-inner__icon-preview-image doc-list-inner__link-file fill-theme-parent" target="_blank" href="--><? //=$arDocFile['SRC']?><!--">-->
-            <!--											--><? //=CAllcorp3::showIconSvg('image-preview fill-theme-target', SITE_TEMPLATE_PATH.'/images/svg/file_download.svg');?>
-            <!--										</a>-->
-            <!--									--><? //endif;?>
-            <!--								--><? //endif;?>
-            <!--							</div>-->
-            <!--						</div>-->
-            <!--					</div>-->
-            <!--				</div>-->
+
         <? endforeach; ?>
     </div>
     <? $this->EndViewTarget(); ?>
