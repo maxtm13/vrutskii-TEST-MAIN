@@ -112,6 +112,7 @@ ul li.my_tabs-mobile::before{
   font-weight: 100;
   margin-left: 24px;
 }
+
 .my_tabs-mobile-title .my_tabs-mobile-list-item > img{
   transform: rotate(-90deg);
   transition: transform 0.3s;

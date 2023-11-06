@@ -14,7 +14,7 @@ $bTab = isset($tabCode) && $tabCode === 'articles';
             <?$bCheckAjaxBlock = CAllcorp3::checkRequestBlock("articles-list-inner");?>
             <?$APPLICATION->IncludeComponent(
                 "bitrix:news.list",
-                "items-list-inner",
+                "items-list-forService",
                 array(
                     "IBLOCK_TYPE" => "aspro_allcorp3_content",
                     "IBLOCK_ID" => $templateData['ARTICLES']['IBLOCK_ID'],
@@ -26,7 +26,7 @@ $bTab = isset($tabCode) && $tabCode === 'articles';
                     "FILTER_NAME" => "arrArticlesFilter",
                     "FIELD_CODE" => array(
                         0 => "NAME",
-                        1 => "PREVIEW_TEXT",
+                        1 => "",
                         2 => "PREVIEW_PICTURE",
                         3 => "DATE_ACTIVE_FROM",
                         4 => "",

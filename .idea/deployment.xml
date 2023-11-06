@@ -71,7 +71,6 @@
             <excludedPath path="/bitrix/templates/desktop_app" />
             <excludedPath path="/bitrix/templates/landing24" />
             <excludedPath path="/bitrix/templates/mail_user" />
-            <excludedPath path="/.gitignore" />
             <excludedPath path="/.htaccess" />
             <excludedPath path="/.htaccess.restore" />
             <excludedPath path="/.htaccess_back" />
@@ -79,6 +78,7 @@
             <excludedPath path="/upload" />
             <excludedPath path="/service_IB_files" />
             <excludedPath path="/service_IBlock_files" />
+            <excludedPath path="/bitrix/stack_cache" />
           </excludedPaths>
         </serverdata>
       </paths>

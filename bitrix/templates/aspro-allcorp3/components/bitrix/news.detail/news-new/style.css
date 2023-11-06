@@ -233,6 +233,9 @@ ul.nav.mytabs_inService{
 .right_content .item{
   justify-content: flex-start;
 }
+.mytabs_inService-mobile{
+  display: none;
+}
 @media (max-width: 991px) {
   .top-info .flexbox {
     flex-wrap: wrap;
@@ -244,6 +247,46 @@ ul.nav.mytabs_inService{
   }
 }
 @media (max-width: 600px) {
+  .tab-content_,.mytabs_inService-desktop{
+    display: none;
+  }
+  .tab_forService{
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #E5E5E5;
+    border-right: none;
+    border-left: none;
+    margin-bottom: 0;
+  }
+  .tab_forService.active{
+    border-top:1px solid #333;
+    border-bottom:1px solid #333;
+    border-left: none;
+    border-right: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  ul.mytabs_inService-mobile li.tab_forService::before{
+    content: "";
+    background: url("/images/icon-check-mark-90.svg") no-repeat;
+    left: 0;
+    /*top: auto;*/
+    height: 26px;
+    width: 25px;
+    transition: transform 0.3s;
+  }
+  ul.mytabs_inService-mobile li.tab_forService.active::before{
+    transform: rotate(90deg);
+  }
+  .mytabs_inService-mobile{
+    display: block;
+  }
+  .tabs-block .arrow_scroll{
+    max-height: none;
+  }
+  .mytabs_inService-mobile .tab-content{
+    display: none;
+  }
   .top-info__bottom {
     flex-wrap: wrap;
   }
@@ -259,13 +302,14 @@ ul.nav.mytabs_inService{
   }
   .grid_items.grid_items-mobile {
     display: grid;
-    grid-template-columns: 80% 20%;
-    column-gap: 5%;
+    grid-template-columns: 5px 80%;
+    column-gap: 28px;
   }
   #CHARACTERISTICS .item{
     display: block;
     height: auto;
     padding: 25px 0;
+    text-align: left;
   }
   .center_line{
     height: calc(100% - 60px);

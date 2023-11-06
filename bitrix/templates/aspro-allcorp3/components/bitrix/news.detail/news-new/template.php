@@ -777,15 +777,16 @@ $bDiscountCounter = ($arResult['ACTIVE_TO'] && in_array('ACTIVE_TO', $arParams['
 
             </div>
             <div class="grid_items  grid_items-mobile">
+                <div class="center_line"></div>
                 <div class="grid_items-content">
                 <?foreach ($arPropValue as $item) {?>
                     <div class="item">
-                        <div class="left_text"><?= $item ?></div>
+                        <div class="right_text"><?= $item ?></div>
 
                     </div>
                 <?}?>
                 </div>
-                <div class="center_line"></div>
+
             </div>
         </div>
         <? /*endif;*/ ?>
