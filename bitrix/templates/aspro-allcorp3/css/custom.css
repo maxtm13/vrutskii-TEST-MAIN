@@ -115,7 +115,10 @@ body .banners-img-with-text-list__item-text--absolute * {font-weight: 100;}
 .price__mobile-nav{
     display: none;
 }
-
+#bx_incl_area_30б, .footer__license{
+    display:flex;
+    flex-direction: column;
+}
 
 @media (min-width: 601px){
 .elements-count-4 .banners-img-with-text-list__item--short .banners-img-with-text-list__item-text--absolute {top:135px;}

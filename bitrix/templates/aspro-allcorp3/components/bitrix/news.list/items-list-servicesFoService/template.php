@@ -209,12 +209,7 @@ global $arTheme;
 						<div class="items-list-inner__item-text-wrapper <?=($bShowPrice ? ' items-list-inner__item-text-wrapper--has-bottom-part items-list-inner__item-text-wrapper--has-bottom-part--'.$arParams['PRICE_POSITION'] : '')?>">
 							<div class="items-list-inner__item-text-top-part <?=(!$arParams['NARROW'] && !($bShowImage && $imageSrc)) ? 'flex-1' : ''?>">
 								<?if($arParams['IMAGE_POSITION'] === 'LEFT'):?>
-									<?if($bDetailLink):?>
-										<a class="arrow-all stroke-theme-target" href="<?=$detailUrl?>">
-											<?=CAllcorp3::showIconSvg(' arrow-all__item-arrow', SITE_TEMPLATE_PATH.'/images/svg/Arrow_map.svg');?>
-											<div class="arrow-all__item-line colored_theme_hover_bg-el"></div>
-										</a>
-									<?endif;?>
+
 								<?endif;?>
 
 								<?if(

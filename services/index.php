@@ -1,7 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Услуги");
-?><?$APPLICATION->IncludeComponent(
+?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"services-new", 
 	array(
@@ -24,7 +26,7 @@ $APPLICATION->SetTitle("Услуги");
 		"COMPOSITE_FRAME_TYPE" => "AUTO",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_BLOCKS_ALL_ORDER" => "order_form,desc,char,tizers,reviews,big_gallery,video,services,sale,projects,news,articles,docs,staff,faq,partners,vacancy,goods,dops,comments",
-		"DETAIL_BLOCKS_ORDER" => "order_form,tabs,big_gallery,tizers,sale,services,staff,projects,news,goods,articles,partners,vacancy,comments",
+		"DETAIL_BLOCKS_ORDER" => "order_form,tabs,big_gallery,tizers,sale,staff,projects,news,goods,articles,partners,services,vacancy,comments,tariffs",
 		"DETAIL_BLOCKS_TAB_ORDER" => "desc,char,video,docs,faq,reviews,buy,payment,delivery,dops",
 		"DETAIL_BLOG_EMAIL_NOTIFY" => "N",
 		"DETAIL_BLOG_TITLE" => "Комментарии",
@@ -182,7 +184,7 @@ $APPLICATION->SetTitle("Услуги");
 		"SHOW_CHILD_SECTIONS" => "Y",
 		"SHOW_DELIVERY" => "N",
 		"SHOW_DETAIL_LINK" => "Y",
-		"SHOW_DOPS" => "N",
+		"SHOW_DOPS" => "Y",
 		"SHOW_ELEMENTS_IN_LAST_SECTION" => "N",
 		"SHOW_PAYMENT" => "N",
 		"SHOW_SECTION" => "Y",
@@ -224,13 +226,13 @@ $APPLICATION->SetTitle("Услуги");
 		"S_ASK_QUESTION" => "",
 		"S_ORDER_SERVISE" => "",
 		"TYPE_BIG_GALLERY" => "SMALL",
-		"T_ARTICLES" => "",
+		"T_ARTICLES" => "Наши эксперты об автоматицзации бизнеса",
 		"T_BIG_GALLERY" => "",
 		"T_CHAR" => "Наш процесс",
 		"T_COMMENTS" => "comm",
 		"T_DESC" => "Об услуге",
-		"T_DOCS" => "",
-		"T_DOPS" => "",
+		"T_DOCS" => "Нормативная база",
+		"T_DOPS" => "Отрасли",
 		"T_FAQ" => "",
 		"T_GOODS" => "",
 		"T_NEWS" => "",
