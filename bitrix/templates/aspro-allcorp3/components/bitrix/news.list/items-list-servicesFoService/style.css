@@ -8,6 +8,26 @@
 .items-list-inner__item-without-image {
   padding: 35px 36px;
 }
+.services .items-list-inner__item-text-medium-part{
+  position: relative;
+}
+
+.services .items-list-inner__item-text-wrapper{
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+}
+.services .items-list-inner__item{
+  min-height: 414px;
+}
+.services .grid-list {
+  grid-template-columns: repeat(4, 350px);
+}
+
+.services .arrow-all{
+  display: inline-block;
+  position: inherit;
+}
 @media (max-width: 767px) {
   .items-list-inner__item--big-padding.flexbox--column-t767 {
     padding: 40px;

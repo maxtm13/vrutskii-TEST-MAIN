@@ -107,7 +107,10 @@ body .banners-img-with-text-list__item-text--absolute * {font-weight: 100;}
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
+}
+.more_info{
+    display: inline-block;
+    margin-top: 15px;
 }
 .header-menu__dropdown-menu{
     -webkit-text-fill-color: #333;

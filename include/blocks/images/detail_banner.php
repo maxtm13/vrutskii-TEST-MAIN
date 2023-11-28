@@ -20,6 +20,9 @@ $arOptions = $arConfig['PARAMS'];
         <div class="maxwidth-banner ">
             <div class="banners-big__wrapper">
                 <div class="banners-big__item-wrapper">
+                    <pre>
+                        <? print_r($arOptions['PICTURES']['BG']);?>
+                    </pre>
                     <div class="box banners-big__item banners-big__depend-height banners-big__depend-padding banners-big__item--<?=$arOptions['COLOR']?>" style="background-image: url(<?=$arOptions['PICTURES']['BG']['SRC']?>); opacity: 1;" data-color="<?=$arOptions['COLOR']?>">
                         <div class="maxwidth-theme pos-static">
                             <div class="banners-big__inner">

@@ -174,7 +174,7 @@ global $arTheme;
 
 				$bShowPrice = in_array('PRICE', (array)$arParams['PROPERTY_CODE']) && strlen($arItem['DISPLAY_PROPERTIES']['PRICE']['VALUE']);
 				?>
-				<div class="items-list-inner__wrapper <?=$itemWrapperClasses?> <?=$mixitup_class;?>" data-ref="mixitup-target">
+				<div class="items-list-inner__wrapper 1111 <?=$itemWrapperClasses?> <?=$mixitup_class;?>" data-ref="mixitup-target">
 					<div class="items-list-inner__item <?=$itemClasses?><?=($bDetailLink ? '' : ' items-list-inner__item--cursor-initial')?><?=(!$bShowImage || !$imageSrc ? ' items-list-inner__item-without-image' : '')?><?=($bSale ? ' items-list-inner__item--sale' : '')?>" id="<?=$this->GetEditAreaId($arItem['ID'])?>">
 						<?//if($bShowImage && $imageSrc):?>
 						<?if(0):?>
@@ -220,7 +220,7 @@ global $arTheme;
 										<?// section title?>
 										<?if($bSections):?>
 											<div class="line-block__item">
-												<div class="items-list-inner__item-section<?=($bActiveDate ? ' bordered rounded-4 font_12 color_333' : ' font_13 color_999')?>"><?=implode(', ', $arItem['SECTIONS'])?></div>
+												<div class="items-list-inner__item-section<?=((false) ? ' bordered rounded-4 font_12 color_333' : ' font_13 color_999')?>"><?=implode(', ', $arItem['SECTIONS'])?></div>
 											</div>
 										<?endif;?>
 
@@ -231,11 +231,11 @@ global $arTheme;
 													<?if($bSale):?>
 														<?=CAllcorp3::showIconSvg("sale", SITE_TEMPLATE_PATH.'/images/svg/Sale_discount.svg', '', '', true, false);?>
 													<?endif;?>
-													<?if(strlen($arItem['DISPLAY_PROPERTIES']['PERIOD']['VALUE'])):?>
-														<span class="items-list-inner__item-period-date"><?=$arItem['DISPLAY_PROPERTIES']['PERIOD']['VALUE']?></span>
-													<?else:?>
-														<span class="items-list-inner__item-period-date items-list-inner__item-period-date--from"><?=$arItem['DISPLAY_ACTIVE_FROM']?></span>
-													<?endif;?>
+<!--													--><?//if(strlen($arItem['DISPLAY_PROPERTIES']['PERIOD']['VALUE'])):?>
+<!--														<span class="items-list-inner__item-period-date">--><?php //=$arItem['DISPLAY_PROPERTIES']['PERIOD']['VALUE']?><!--</span>-->
+<!--													--><?//else:?>
+<!--														<span class="items-list-inner__item-period-date items-list-inner__item-period-date--from">--><?php //=$arItem['DISPLAY_ACTIVE_FROM']?><!--</span>-->
+<!--													--><?//endif;?>
 												</div>
 											</div>
 										<?endif;?>
@@ -276,7 +276,18 @@ global $arTheme;
 								<?endif;?>
 							</div>
 
-							<div class="items-list-inner__item-text-medium-part"><a href="<?=$detailUrl?>"> Подробнее об услуге <i class="items-list-inner__item-text-medium-icon"></i></a></div>
+							<div class="items-list-inner__item-text-medium-part"><a href="<?=$detailUrl?>"> Подробнее об услуге <i class="items-list-inner__item-text-medium-icon">
+										<span><?= CAllcorp3::showIconSvg(' my_arrow-all__item-arrow', SITE_TEMPLATE_PATH . '/images/svg/arrows/right-arrow.svg'); ?> </span>
+
+									</i></a>
+								<?if($bDetailLink):?>
+									<a class="arrow-all stroke-theme-target" href="<?=$detailUrl?>">
+										<?//=CAllcorp3::showIconSvg(' arrow-all__item-arrow', SITE_TEMPLATE_PATH.'/images/svg/Arrow_map.svg');?>
+<!--										<div class="arrow-all__item-line colored_theme_hover_bg-el"></div>-->
+
+									</a>
+								<?endif;?>
+							</div>
 
 							<?if($bShowPrice):?>
 								<div class="items-list-inner__item-text-bottom-part items-list-inner__item-text-bottom-part--has-price">
