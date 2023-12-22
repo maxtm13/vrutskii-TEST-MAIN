@@ -390,6 +390,10 @@ $navPageNomer = $arResult['NAV_RESULT']->{'NavPageNomer'};
 										<?$htmlPreviewText = ob_get_clean()?>
 										<?=$htmlPreviewText?>
 									<?endif;?>
+<!--                                    <pre>-->
+<!--                                        --><?// print_r($arItem)?>
+<!--                                    </pre>-->
+
 
 									<?if(
 										$arItem['FORMAT_PROPS'] ||

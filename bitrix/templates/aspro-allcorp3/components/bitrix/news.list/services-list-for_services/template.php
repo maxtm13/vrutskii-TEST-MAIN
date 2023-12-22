@@ -237,6 +237,7 @@ $arItems = $bItemsTypeElements ? $arResult['ITEMS'] : $arResult['SECTIONS'];
 				$bShowBottom = ($bItemsTypeElements && $bShowPrice) || ($arParams['IMAGE_POSITION'] === 'RIGHT' || $arParams['IMAGE_POSITION'] === 'SIDE');
 				?>
 				<div class="services-list__wrapper <?=$itemWrapperClasses?>">
+
 					<div class="services-list__item <?=$itemClasses?> <?=($bDetailLink ? '' : 'services-list__item--cursor-initial')?>" id="<?=$this->GetEditAreaId($arItem['ID'])?>">
 						<?if($bShowImage && $imageSrc):?>
 							<div class="services-list__item-image-wrapper <?=$imageWrapperClasses?>">

@@ -1,5 +1,3 @@
 User-Agent: *
 Disallow: /
 Crawl-delay: 20
-Host: test.vrutskii.com
-Sitemap: https://vrutskii.com/sitemap.xml

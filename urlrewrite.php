@@ -128,7 +128,7 @@ $arUrlRewrite=array (
     'PATH' => '/projects/index.php',
     'SORT' => 100,
   ),
-  38 => 
+  47 => 
   array (
     'CONDITION' => '#^/services/#',
     'RULE' => '',
@@ -160,12 +160,12 @@ $arUrlRewrite=array (
     'PATH' => '/contacts/index.php',
     'SORT' => 100,
   ),
-  7 => 
+  42 => 
   array (
-    'CONDITION' => '#/cabinet/#',
+    'CONDITION' => '#^/tariffs/#',
     'RULE' => '',
-    'ID' => 'aspro:auth.allcorp3',
-    'PATH' => '/cabinet/index.php',
+    'ID' => 'bitrix:news',
+    'PATH' => '/tariffs/index.php',
     'SORT' => 100,
   ),
   20 => 
@@ -174,14 +174,6 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/gallery/index.php',
-    'SORT' => 100,
-  ),
-  21 => 
-  array (
-    'CONDITION' => '#/tariffs/#',
-    'RULE' => '',
-    'ID' => 'bitrix:news',
-    'PATH' => '/tariffs/index.php',
     'SORT' => 100,
   ),
   24 => 
@@ -214,6 +206,22 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:news',
     'PATH' => '/news/index.php',
+    'SORT' => 100,
+  ),
+  45 => 
+  array (
+    'CONDITION' => '#^/faq/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/faq/index.php',
+    'SORT' => 100,
+  ),
+  46 => 
+  array (
+    'CONDITION' => '#^/fff/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/fff/index.php',
     'SORT' => 100,
   ),
 );

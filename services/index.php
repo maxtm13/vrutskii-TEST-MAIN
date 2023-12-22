@@ -1,5 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("MENU_ONLY_LEFT", "Y");
 $APPLICATION->SetTitle("Услуги");
 ?>
 
@@ -14,7 +15,7 @@ $APPLICATION->SetTitle("Услуги");
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
-		"BIG_GALLERY_PROP_CODE" => "-",
+		"BIG_GALLERY_PROP_CODE" => "PHOTOS",
 		"BROWSER_TITLE" => "-",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
@@ -26,7 +27,7 @@ $APPLICATION->SetTitle("Услуги");
 		"COMPOSITE_FRAME_TYPE" => "AUTO",
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_BLOCKS_ALL_ORDER" => "order_form,desc,char,tizers,reviews,big_gallery,video,services,sale,projects,news,articles,docs,staff,faq,partners,vacancy,goods,dops,comments",
-		"DETAIL_BLOCKS_ORDER" => "order_form,tabs,big_gallery,tizers,sale,staff,projects,news,goods,articles,partners,services,vacancy,comments,tariffs",
+		"DETAIL_BLOCKS_ORDER" => "tabs,big_gallery,tizers,order_form,sale,staff,projects,news,goods,articles,partners,vacancy,comments,tariffs,services",
 		"DETAIL_BLOCKS_TAB_ORDER" => "desc,char,video,docs,faq,reviews,buy,payment,delivery,dops",
 		"DETAIL_BLOG_EMAIL_NOTIFY" => "N",
 		"DETAIL_BLOG_TITLE" => "Комментарии",
@@ -131,10 +132,9 @@ $APPLICATION->SetTitle("Услуги");
 		"LIST_FIELD_CODE" => array(
 			0 => "ID",
 			1 => "NAME",
-			2 => "PREVIEW_TEXT",
-			3 => "PREVIEW_PICTURE",
-			4 => "DETAIL_PICTURE",
-			5 => "",
+			2 => "PREVIEW_PICTURE",
+			3 => "DETAIL_PICTURE",
+			4 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
 			0 => "FORM_ORDER",
@@ -180,7 +180,7 @@ $APPLICATION->SetTitle("Услуги");
 		"SHOW_BIG_GALLERY" => "Y",
 		"SHOW_BUY" => "N",
 		"SHOW_CATEGORY" => "N",
-		"SHOW_CHILD_ELEMENTS" => "Y",
+		"SHOW_CHILD_ELEMENTS" => "N",
 		"SHOW_CHILD_SECTIONS" => "Y",
 		"SHOW_DELIVERY" => "N",
 		"SHOW_DETAIL_LINK" => "Y",
@@ -227,7 +227,7 @@ $APPLICATION->SetTitle("Услуги");
 		"S_ORDER_SERVISE" => "",
 		"TYPE_BIG_GALLERY" => "SMALL",
 		"T_ARTICLES" => "Наши эксперты об автоматицзации бизнеса",
-		"T_BIG_GALLERY" => "",
+		"T_BIG_GALLERY" => "галереяяяяя",
 		"T_CHAR" => "Наш процесс",
 		"T_COMMENTS" => "comm",
 		"T_DESC" => "Об услуге",
@@ -242,7 +242,7 @@ $APPLICATION->SetTitle("Услуги");
 		"T_SALE" => "",
 		"T_SERVICES" => "Вам так же могут быть интересны другие услуги",
 		"T_STAFF" => "",
-		"T_TARIFFS" => "",
+		"T_TARIFFS" => "Пакеты",
 		"T_VACANCY" => "",
 		"T_VIDEO" => "",
 		"USE_CATEGORIES" => "N",
