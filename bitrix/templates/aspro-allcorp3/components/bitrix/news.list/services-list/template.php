@@ -318,7 +318,7 @@ $arItems = $bItemsTypeElements ? $arResult['ITEMS'] : $arResult['SECTIONS'];
 								<?endif;?>
 
 								<div class="services-list__item-title switcher-title font_<?=$arParams['NAME_SIZE']?>">
-									<i class="icon"><img src="<?=$arFile['SRC']?>" alt=""></i>
+<!--									<i class="icon"><img src="--><?//=$arFile['SRC']?><!--" alt=""></i>-->
 									<?if($bDetailLink):?>
 										<a class="dark_link 111 color-theme-target" href="<?=$detailUrl?>"><?=$arItem['NAME']?></a>
 									<?else:?>
