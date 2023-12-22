@@ -1,1 +1,4 @@
 /.idea
+*.zip
+/bitrix/tmp
+/bitrix/updates
