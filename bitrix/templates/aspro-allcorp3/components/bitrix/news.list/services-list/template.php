@@ -237,10 +237,10 @@ $arItems = $bItemsTypeElements ? $arResult['ITEMS'] : $arResult['SECTIONS'];
 				$bShowBottom = ($bItemsTypeElements && $bShowPrice) || ($arParams['IMAGE_POSITION'] === 'RIGHT' || $arParams['IMAGE_POSITION'] === 'SIDE');
 				?>
 				<div class="services-list__wrapper <?=$itemWrapperClasses?>">
-					<pre>
-						<?$arFile = CFile::GetFileArray($arItem['UF_ICON']);
-						print_r($arFile['SRC']) ?>
-					</pre>
+<!--					<pre class="maxtm1">-->
+<!--						--><?//$arFile = CFile::GetFileArray($arItem['UF_ICON']);
+//						print_r($arFile['SRC']) ?>
+<!--					</pre>-->
 					<div class="services-list__item <?=$itemClasses?> <?=($bDetailLink ? '' : 'services-list__item--cursor-initial')?>" id="<?=$this->GetEditAreaId($arItem['ID'])?>">
 						<?if($bShowImage && $imageSrc):?>
 							<div class="services-list__item-image-wrapper <?=$imageWrapperClasses?>">
@@ -318,7 +318,7 @@ $arItems = $bItemsTypeElements ? $arResult['ITEMS'] : $arResult['SECTIONS'];
 								<?endif;?>
 
 								<div class="services-list__item-title switcher-title font_<?=$arParams['NAME_SIZE']?>">
-									<i class="icon"><img src="<?=$arFile['SRC']?>" alt=""></i>
+<!--									<i class="icon"><img src="--><?//=$arFile['SRC']?><!--" alt=""></i>-->
 									<?if($bDetailLink):?>
 										<a class="dark_link 111 color-theme-target" href="<?=$detailUrl?>"><?=$arItem['NAME']?></a>
 									<?else:?>

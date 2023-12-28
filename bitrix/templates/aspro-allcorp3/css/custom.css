@@ -18,15 +18,15 @@
     content: " ";
 }
 .services-list__item--no-scrolled > div.services-list__item-text-wrapper.flexbox > div > div.services-list__item-title.switcher-title > a {padding-left: 30px;font-size: 28px;font-family: 'Forum';}
-.services-list__item--no-scrolled > div.services-list__item-text-wrapper.flexbox > div > div.services-list__item-title.switcher-title > a::before {
-    background-image: url(/bitrix/templates/aspro-allcorp3/images/menu-check-mark.png);
-    position: absolute;
-    left: -10px;
-    top: 0px;
-    height: 26px;
-    width: 28px;
-    content: " ";
-}
+/*.services-list__item--no-scrolled > div.services-list__item-text-wrapper.flexbox > div > div.services-list__item-title.switcher-title > a::before {*/
+/*    background-image: url(/bitrix/templates/aspro-allcorp3/images/menu-check-mark.png);*/
+/*    position: absolute;*/
+/*    left: -10px;*/
+/*    top: 0px;*/
+/*    height: 26px;*/
+/*    width: 28px;*/
+/*    content: " ";*/
+/*}*/
 
 
 .services-list__item-childs>ul>li {display: flex;}
