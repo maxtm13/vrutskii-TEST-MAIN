@@ -87,7 +87,9 @@ h1#pagetitle {font-family: 'Forum';font-weight: 100;}
 .contacts-detail__btn-wrapper>span>span.btn {font-weight: 400;}
 body .project-list__item-title .dark_link {font-weight: 100;}
 body .banners-img-with-text-list__item-text--absolute * {font-weight: 100;}
-.side-menu.bordered {border: none;}
+.side-menu.bordered {
+    /*border: none ;*/
+    }
 .staff-block-inner__section-title{font-family: "Forum" !important;font-size: 26px;}
 .switcher-title {font-weight: 100;}
 #main > div.body.index.hover_ > div.main.banner-auto > div > div.drag-block.container.MIDDLE_ADV > div > div > div > div > div{max-width: 440px;}
@@ -127,6 +129,10 @@ body .banners-img-with-text-list__item-text--absolute * {font-weight: 100;}
 }
 .col-md-4.left__menu {
     margin-right: 5px;
+}
+
+.container .left_block {
+    width: 540px;
 }
 
 @media (min-width: 601px){
