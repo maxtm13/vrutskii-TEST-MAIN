@@ -1,10 +1,10 @@
 <?$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
-	"left", 
+	"left_vertical", 
 	array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "podrazdel_faq",
-		"COMPONENT_TEMPLATE" => "left",
+		"COMPONENT_TEMPLATE" => "left_vertical",
 		"DELAY" => "N",
 		"MAX_LEVEL" => "3",
 		"MENU_CACHE_GET_VARS" => array(
